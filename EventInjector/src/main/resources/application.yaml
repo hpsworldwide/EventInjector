@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: Event-Injector
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+  datasource:
+    # For Springboot & embedded tomcat
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@//10.1.84.5:1534/pcard
+    username: POWERCARD
+    password: pcard001
+    jndiName: jdbc/PWCDS
